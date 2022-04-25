@@ -1,0 +1,19 @@
+typedef struct graph
+{
+    // val just use to label the vertex
+    int val;
+
+    // since the maze just has 4 directions,
+    // I simplify vertex to just point to 4 other vertices
+    edge up;
+    edge down;
+    edge left;
+    edge right;
+}vertex;
+
+typedef struct Edge
+{
+    int weight;
+    vertex *neighbour;
+    bool visited;
+}edge;
